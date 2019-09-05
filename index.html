@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Some Web Page</title>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
+    <body>
+        <div class='menu-container'>
+            <div class='menu'>
+                <div class='date'>Dec 31, 1999</div>
+            </div>
+        </div>
+        <div class='header-container'>
+            <div class='header'>
+                <h1>Place Holder</h1>
+            </div>
+        </div>
+        <script>
+            var today = new Date();
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            document.getElementsByClassName("date")[0].innerHTML = today;
+        </script>
+    </body>
 </html>
