@@ -1,21 +1,13 @@
-let today = new Date().toDateString();
-document.getElementsByClassName("date")[0].innerHTML = today;
-
-
 function time(){
-    var date = new Date();
-    var hh = date.getHours();
-    var ampm = hh >= 12 ? "PM" : "AM";
-    hh = hh % 12;
-    hh = hh == 0 ? 12 : hh;
-    var mm = date.getMinutes();
-    var ss = date.getSeconds();
-    ss = ss < 10 ? "0"+ss : ss;
-    var ms = date.getMilliseconds();
-    ms = ms.toString().substring(0,2);
-    ms = ms < 10 ? "0" + ms : ms;
-    document.getElementsByClassName("time")[0].innerHTML = hh + ":" + mm + ":" + ss + ":" + ms + " " + ampm; 
+    let options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    let date = new Date();
+    let ms = date.getMilliseconds();
+        ms = ms.toString().substring(0, 2);
+        ms = ms < 10 ? "0" + ms : ms;
+    let datetime = date.toLocaleTimeString('en-us', options) + ":" + ms;
+    document.getElementsByClassName("datetime")[0].innerHTML = datetime;
 }
+
 setInterval(time, 45);
 
 
