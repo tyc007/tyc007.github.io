@@ -1,5 +1,23 @@
-let today = new Date();
+let today = new Date().toDateString();
 document.getElementsByClassName("date")[0].innerHTML = today;
+
+
+function time(){
+    var date = new Date();
+    var hh = date.getHours();
+    var ampm = hh >= 12 ? "PM" : "AM";
+    hh = hh % 12;
+    hh = hh == 0 ? 12 : hh;
+    var mm = date.getMinutes();
+    var ss = date.getSeconds();
+    ss = ss < 10 ? "0"+ss : ss;
+    var ms = date.getMilliseconds();
+    ms = ms.toString().substring(0,2);
+    ms = ms < 10 ? "0" + ms : ms;
+    document.getElementsByClassName("time")[0].innerHTML = hh + ":" + mm + ":" + ss + ":" + ms + " " + ampm; 
+}
+setInterval(time, 45);
+
 
 let sample_input = `6 (5 ounce) salmon fillets
 4 cloves garlic, minced
@@ -21,6 +39,7 @@ salt and pepper to taste
 
 document.getElementById("input-textarea").placeholder = sample_input;
 document.getElementById("output-textarea").placeholder = sample_output;
+
 
 $("button").click(function () {
     let text = $("#input-textarea").val();

@@ -4,7 +4,8 @@
     box-sizing: border-box;
     font-family: Helvetica;
 }
-  
+ 
+/* Menu / Nav Bar Items */
 .menu-container {
     color: #fff;
     background-color: #5995DA;
@@ -19,12 +20,16 @@
     justify-content: space-between;
 }
 
+.date {
+  margin-right: 0.5rem;
+}
+
 .signup {
   margin-left: auto;
 }
 
 .login {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
 .header-container {
