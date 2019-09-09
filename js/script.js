@@ -1,14 +1,11 @@
 function time(){
-    let options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    let options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
     let date = new Date();
-    let ms = date.getMilliseconds();
-        ms = ms.toString().substring(0, 2);
-        ms = ms < 10 ? "0" + ms : ms;
-    let datetime = date.toLocaleTimeString('en-us', options) + ":" + ms;
+    let datetime = date.toLocaleTimeString('en-us', options);
     document.getElementsByClassName("datetime")[0].innerHTML = datetime;
 }
 
-setInterval(time, 45);
+setInterval(time, 100);
 
 
 let sample_input = `6 (5 ounce) salmon fillets
@@ -32,8 +29,9 @@ salt and pepper to taste
 document.getElementById("input-textarea").placeholder = sample_input;
 document.getElementById("output-textarea").placeholder = sample_output;
 
-
-$("button").click(function () {
-    let text = $("#input-textarea").val();
-    $("#output-textarea").val(text);
-});
+window.onload = function () {
+    document.getElementById("convert").onclick = function convert() {
+        let text = document.getElementById("input-textarea").value;
+        document.getElementById("output-textarea").value = text;
+    }
+}

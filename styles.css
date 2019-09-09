@@ -1,3 +1,5 @@
+/* border: 1px solid #fff; debug helper */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,26 +8,34 @@
 }
  
 /* Menu / Nav Bar Items */
-.menu-container {
+.nav-container {
     color: #fff;
     background-color: #5995DA;
-    padding: 20px 0;
     display: flex;
     justify-content: center;
 }
   
-.menu {
+.nav-bar {
     width: 80%;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+    padding: 1rem 1rem;
 }
 
-.signup {
+.nav-links {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 1rem;
+}
+
+.nav-links:hover {
+    color: black;
+    background-color: #ddd;
+}
+
+.home {
   margin-left: auto;
-}
-
-.login {
-  margin-left: 1rem;
 }
 
 .header-container {
@@ -57,9 +67,13 @@
 
 .content-grid-item {
   /* Debug border: 2px solid red;*/ 
-  padding: 20px;
+    padding: 1rem;
 }
 
 textarea {
-    padding: 5px;
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.25rem;
 }
