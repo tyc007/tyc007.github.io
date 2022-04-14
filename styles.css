@@ -1,22 +1,39 @@
 body {
-    background-color: lightblue;
+    background: linear-gradient(-45deg, #DE3163, #F7DC6F, skyblue, #9FE2BF);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
 
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .container {
     display: flex;
+    align-self: center;
     justify-content: center;
     align-items: center;
     width: 100%; 
-    height: auto;
+    height: 100vh;
   }
 
   .child {
     display: flex;
+    align-self: center;
     justify-content: center;
     align-items: center;
+    vertical-align: middle;
     width: 100%; 
-    height: auto;
+    
     /*outline: dashed 2px red;*/
   }
   
