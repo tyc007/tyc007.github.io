@@ -30,9 +30,9 @@ body {
   }
   
 #dancing-duck{ 
-    width: 40vw;
+    width: 20vw;
     height: auto;
-    max-width: 300px;
+    max-width: 400px;
     filter: blur(0.05rem);
     /* outline: dashed 2px black; */
 }
